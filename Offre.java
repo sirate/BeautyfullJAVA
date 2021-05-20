@@ -3,11 +3,11 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package entity;
+package com.mycompany.myapp.entities;
 
 /**
  *
- * @author ASMA
+ * @author ASUS
  */
 public class Offre {
   private int id;
@@ -30,13 +30,37 @@ public class Offre {
     public Offre() {
     }
 
-    public Offre(String delai, String description, String titre,String image, int taux) {
+    public Offre(String delai, String description, String titre, String image, int taux) {
         this.delai = delai;
         this.description = description;
         this.titre = titre;
-                this.image = image;
+        this.image = image;
         this.taux = taux;
     }
+
+  
+
+    public Offre(int id, String delai, String description, String titre, int taux) {
+        this.id = id;
+        this.delai = delai;
+        this.description = description;
+        this.titre = titre;
+        this.taux = taux;
+    }
+
+    public Offre(String delai, String description, String titre, int taux) {
+        this.delai = delai;
+        this.description = description;
+        this.titre = titre;
+        this.taux = taux;
+    }
+
+   
+   
+
+    
+
+    
 
     public String getImage() {
         return image;
@@ -89,5 +113,5 @@ public class Offre {
     public int getTaux() {
         return taux;
     }
-  
 }
+

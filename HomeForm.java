@@ -6,6 +6,7 @@
 package com.mycompany.myapp.gui;
 
 import com.codename1.ui.Button;
+import com.codename1.ui.Container;
 import com.codename1.ui.Form;
 import com.codename1.ui.Label;
 import com.codename1.ui.layouts.BoxLayout;
@@ -30,15 +31,24 @@ public class HomeForm extends Form {
         Button btnAddTask = new Button("Add Categorie");
         Button btnListTasks = new Button("List categorie");
         Button btnList = new Button("List produit");
-        Button btnListavis = new Button("Mes avis");
+        Button btnList1 = new Button("List Offre");
+                 Button btnList3 = new Button("List Publicite");
+
+         Button btnList2 = new Button("Add Offre");
+
+
 
             
 
         btnAddTask.addActionListener(e -> new AddCatForm(current).show());
         btnListTasks.addActionListener(e -> new ListcatForm(current).show());
         btnList.addActionListener(e -> new ListProduit(current).show());
-        btnListavis.addActionListener(e -> new ListAvisForm(current).show());
-        addAll(btnAddTask, btnListTasks, btnList,btnListavis);
+        btnList1.addActionListener(e->new ListOffre(current).show());
+       btnList2.addActionListener(e->new AddOffreForm(current).show());
+              btnList3.addActionListener(e->new ListPublicite(current).show());
+
+
+        Container addAll = addAll(btnAddTask, btnListTasks, btnList,btnList1,btnList2,btnList3);
 
     }
 

@@ -3,63 +3,24 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package entity;
+package com.mycompany.myapp.entities;
+
 
 /**
  *
  * @author ASUS
  */
 public class Publicite {
-    private int id;
-    private int offre_id;
-     private String type;
-       private String support;
 
-    public Publicite(int offre_id, String type, String support) {
-        this.offre_id = offre_id;
-        this.type = type;
-        this.support = support;
-    }
+   private int id;
+    private   String type;
+      private    String support;
 
-     
-
-    public Publicite(int id, int offre_id, String type, String support) {
-        this.id = id;
-        this.offre_id = offre_id;
-        this.type = type;
-        this.support = support;
-    }
-  public Publicite() {
-      }
-
-    public Publicite( String type, String support) {
-         this.offre_id = offre_id;
-        this.type = type;
-        this.support = support;
-    }
-    
-    public int getId() {
-        return id;
-    }
-
-    public int getOffre_id() {
-        return offre_id;
-    }
-
-    public String getType() {
-        return type;
-    }
-
-    public String getSupport() {
-        return support;
+    public Publicite() {
     }
 
     public void setId(int id) {
         this.id = id;
-    }
-
-    public void setOffre_id(int offre_id) {
-        this.offre_id = offre_id;
     }
 
     public void setType(String type) {
@@ -70,8 +31,23 @@ public class Publicite {
         this.support = support;
     }
 
+    public int getId() {
+        return id;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public String getSupport() {
+        return support;
+    }
+
+    
+
     @Override
     public String toString() {
-        return "Publicite{" + "id=" + id + ", offre_id=" + offre_id + ", type=" + type + ", support=" + support + '}';
+        return "Publicite{" + "id=" + id + ", type=" + type + ", support=" + support + '}';
     }
+    
 }
